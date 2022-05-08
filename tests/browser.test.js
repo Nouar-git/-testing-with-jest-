@@ -25,6 +25,7 @@ test('The stack should be empty in the beginning', async () => {
 
 // My Test
 test('Stack returns the alert text', async () => {
+    driver.switchTo().alert().accept();
     let text = await driver.switchTo().alert().getText();
     let stack = await driver. findElement(By.id('top_of_stack')).getText();
     expect(stack).toEqual(text);
