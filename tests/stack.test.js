@@ -17,3 +17,9 @@ test('peek on stack with two or more elements returns the top element', () => {
     expect(stack.peek()).toBeDefined();
     expect(stack.peek()).toBe(42);
 });
+
+// My test
+test('Push on empty stack returns empty string', () => {
+    stack.push('');
+    expect(stack.peek()).toBe('string');
+});
