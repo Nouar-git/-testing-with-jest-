@@ -19,8 +19,15 @@ afterAll(async() => {
 }, defaultTimeout);
 
 test('The stack should be empty in the beginning', async () => {
-	let stack = await driver.findElement(By.id('top_of_stack')).getText();
+    let stack = await driver.findElement(By.id('top_of_stack')).getText();
 	expect(stack).toEqual("n/a");
+});
+
+// My Test
+test('Stack returns the alert text', async () => {
+    let text = await driver.switchTo().alert().getText();
+    let stack = await driver. findElement(By.id('top_of_stack')).getText();
+    expect(stack).toEqual(text);
 });
 
 describe('Clicking "Pusha till stacken"', () => {
